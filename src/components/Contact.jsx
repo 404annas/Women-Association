@@ -5,35 +5,35 @@ import { IoLocation } from "react-icons/io5";
 
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-b from-emerald-100 to-cyan-50 min-h-screen px-16 pt-36">
-      <p className="flex items-center pb-2 text-4xl font-bold cav">
-        <span className="text-green-700">
+    <div className="bg-gradient-to-b from-emerald-100 to-cyan-50 min-h-screen px-6 md:px-10 lg:px-16 pt-36">
+      {/* Header Section */}
+      <p className="flex items-center pb-2 text-2xl md:text-3xl lg:text-4xl font-bold cav">
+        <span className="text-green-700 mr-2">
           <FaHeart />
         </span>
-        APWA{" "}
+        APWA
       </p>
-      <h1 className="tim text-7xl font-extrabold">Contact Us</h1>
-      <p className="p-regular text-2xl max-w-2xl pt-4 text-gray-800">
+      <h1 className="tim text-4xl md:text-6xl lg:text-7xl font-extrabold">
+        Contact Us
+      </h1>
+      <p className="p-regular text-lg md:text-xl lg:text-2xl max-w-2xl pt-4 text-gray-800">
         May it be{" "}
         <span className="text-gray-900 font-bold">
           feedback, ideas, or support…
         </span>
       </p>
-      <p className="pb-2 pt-2 p-regular text-md max-w-2xl text-gray-800">
+      <p className="pb-2 pt-2 p-regular text-sm md:text-md max-w-2xl text-gray-800">
         We would love to hear from you! Get in touch by filling out the contact
         form or calling us on our office number.
       </p>
       <a href="tel:+61 415724571">
         <button className="bg-green-700 hover:bg-green-800 transition-all duration-300 py-2 px-4 rounded cursor-pointer text-white p-regular text-sm mt-4 flex items-center gap-2">
-          Make a Call{" "}
-          <span>
-            <IoMdCall />
-          </span>
+          Make a Call <IoMdCall />
         </button>
       </a>
 
       {/* Contact Form Section */}
-      <div className="mt-20 pb-10 grid md:grid-cols-2 gap-10 items-start">
+      <div className="mt-20 pb-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         {/* Left: Contact Form */}
         <form className="flex flex-col gap-3 w-full p-normal">
           <label className="font-medium text-gray-800">Name</label>
@@ -41,8 +41,6 @@ const Contact = () => {
             <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-200 border border-e-0 border-emerald-300 rounded-s-md">
               <svg
                 className="w-5 h-5 text-emerald-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -61,7 +59,6 @@ const Contact = () => {
             <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-200 border border-e-0 border-emerald-300 rounded-s-md">
               <svg
                 className="w-5 h-5 text-emerald-500"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -80,7 +77,6 @@ const Contact = () => {
             <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-200 border border-e-0 border-emerald-300 rounded-s-md">
               <svg
                 className="w-5 h-5 text-emerald-500"
-                xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -88,7 +84,7 @@ const Contact = () => {
               </svg>
             </span>
             <input
-              type="phone"
+              type="tel"
               className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-100"
               placeholder="+1 (555) 971 569"
             />
@@ -111,85 +107,85 @@ const Contact = () => {
               width="24"
               height="24"
             >
-              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path fill="none" d="M0 0h24v24H0z" />
               <path
                 fill="currentColor"
                 d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-              ></path>
+              />
             </svg>
             Send Message
           </button>
         </form>
-
-        {/* Right: Image */}
-        <img
-          src="https://www.apwa.org.au/images/contact-banner.jpg"
-          alt="Contact illustration"
-          className="w-full h-full object-cover rounded shadow-md"
-        />
       </div>
 
       <hr />
+
+      {/* Contact Cards */}
       <div className="py-10">
-        <h1 className="p-regular text-lg text-gray-700 max-w-2xl">
+        <h1 className="p-regular text-base md:text-lg text-gray-700 max-w-2xl">
           We empower Pakistani and multicultural women in Australia to achieve
-          independence and well-being across all aspects of life—physical,
-          mental, spiritual, and financial.
+          independence and well-being across all aspects of life.
         </h1>
-        <div className="flex items-center justify-between pt-10 gap-10">
-          <div className="flex flex-col items-center gap-2 w-1/3 bg-emerald-100 border border-emerald-300 px-4 py-4 rounded-xl h-56">
-            <p className="text-4xl text-green-800">
-              <MdEmail />
-            </p>
-            <h1 className="text-2xl font-bold text-gray-800 tim">Email</h1>
-            <p className="p-normal text-center">
-              Write us and we'll get back to you as soon as possible.
-            </p>
-            <a href="mailto:info@auspakwomenassociation.com">
-              <p className="p-regular text-gray-800 text-center cursor-pointer">
-                info@auspakwomenassociation.com
-              </p>
-            </a>
-          </div>
-          <div className="flex flex-col items-center gap-2 w-1/3 bg-emerald-100 border border-emerald-300 px-4 py-4 rounded-xl h-56">
-            <p className="text-4xl text-green-800">
-              <IoMdCall />
-            </p>
-            <h1 className="text-2xl font-bold text-gray-800 tim">Phone</h1>
-            <p className="p-normal text-center">
-              Give us a call and let's have a conversation.
-            </p>
-            <a href="tel:+61 415724571">
-              <p className="p-regular text-gray-800 cursor-pointer">
-                +61 415724571
-              </p>
-            </a>
-          </div>
-          <div className="flex flex-col items-center gap-2 w-1/3 bg-emerald-100 border border-emerald-300 px-4 py-4 rounded-xl h-56">
-            <p className="text-4xl text-green-800">
-              <IoLocation />
-            </p>
-            <h1 className="text-2xl font-bold text-gray-800 tim">Address</h1>
-            <p className="p-normal text-center">
-              7 Campfire Ct, Werrington Downs NSW 2747, Australia
-            </p>
-          </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-between pt-10 gap-6">
+          {[
+            {
+              icon: <MdEmail />,
+              title: "Email",
+              text: "Write us and we'll get back to you as soon as possible.",
+              value: "info@auspakwomenassociation.com",
+              href: "mailto:info@auspakwomenassociation.com",
+            },
+            {
+              icon: <IoMdCall />,
+              title: "Phone",
+              text: "Give us a call and let's have a conversation.",
+              value: "+61 415724571",
+              href: "tel:+61 415724571",
+            },
+            {
+              icon: <IoLocation />,
+              title: "Address",
+              text: "7 Campfire Ct, Werrington Downs NSW 2747, Australia",
+            },
+          ].map(({ icon, title, text, value, href }, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center gap-2 w-full md:w-1/3 bg-emerald-100 border border-emerald-300 px-4 py-6 rounded-xl h-auto text-center"
+            >
+              <p className="text-4xl text-green-800">{icon}</p>
+              <h1 className="text-xl md:text-2xl font-bold text-gray-800 tim">
+                {title}
+              </h1>
+              <p className="p-normal">{text}</p>
+              {value && href ? (
+                <a href={href}>
+                  <p className="p-regular text-gray-800 cursor-pointer text-xs sm:text-sm">
+                    {value}
+                  </p>
+                </a>
+              ) : (
+                <p className="p-regular text-gray-800"></p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
+
       <hr />
 
-      {/* Map Section */}
+      {/* Map */}
       <div className="mt-16 pb-10">
         <iframe
           title="APWA Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13292.009221171784!2d150.7406142!3d-33.7409119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b128516e1e3ffff%3A0x98e5ba6ba6012db0!2sAuspak%20Women%20Association!5e0!3m2!1sen!2sau!4v1689451096790!5m2!1sen!2sau"
           width="100%"
           height="350"
+          className="rounded shadow-md"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="rounded shadow-md"
         ></iframe>
       </div>
     </div>
