@@ -64,7 +64,7 @@ const AboutAno = () => {
       <div className="flex items-center flex-col-reverse lg:flex-row gap-10 py-10 px-4 sm:px-8 md:px-12 lg:px-16 bg-white">
         {/* Timeline */}
         <div className="relative flex-1 space-y-8 pl-4 sm:pl-6">
-          <div className="absolute top-10 left-0 sm:left-2 w-[2px] h-[450px] sm:[h-300px] md:h-[350px] lg:h-[420px] bg-green-800" />
+          <div className="absolute top-10 left-0 sm:left-2 w-[2px] h-[480px] sm:[h-300px] md:h-[350px] lg:h-[420px] bg-green-800" />
           {data.items.map((item, index) => (
             <div key={index} className="relative flex items-start gap-4">
               <div className="absolute top-1 left-[-25px] w-5 h-5 rounded-full border-2 border-green-800 bg-green-800" />
