@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Text Section */}
         <div className="w-full md:w-1/2">
-          <h1 className="tim font-extrabold text-2xl sm:text-4xl lg:text-5xl text-[#413C3A]">
+          <h1 className="tim font-extrabold text-2xl sm:text-4xl text-[#413C3A]">
             Serving the Pakistani community
           </h1>
           <p className="p-regular text-gray-700 text-sm sm:text-base py-4 sm:py-6">
