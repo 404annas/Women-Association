@@ -1,7 +1,5 @@
 import { IoMdCall } from "react-icons/io";
-import { HandHeart } from "lucide-react";
-import { Handshake } from "lucide-react";
-import { HandCoins } from "lucide-react";
+import { HandHeart, Handshake, HandCoins } from "lucide-react";
 
 const AboutAno = () => {
   const data = {
@@ -35,46 +33,41 @@ const AboutAno = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-emerald-100 to-cyan-50 min-h-screen pt-36">
-      <div className="px-16 pb-10">
+    <div className="bg-gradient-to-b from-emerald-100 to-cyan-50 pt-36">
+      {/* Header Section */}
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 pb-10">
         <p className="text-sm text-gray-800 p-semibold bg-emerald-200 rounded-full px-4 inline-flex items-center tracking-wide">
           ABOUT US
         </p>
-        <h1 className="tim font-normal text-7xl pt-4">
+        <h1 className="tim font-normal text-4xl sm:text-5xl lg:text-7xl pt-4">
           The story of <span className="cav font-bold">APWA</span>
         </h1>
-        <p className="pb-2 pt-2 p-regular text-md max-w-2xl text-gray-800">
+        <p className="p-regular text-sm sm:text-base max-w-2xl text-gray-800 pt-2">
           AusPak Women Association is a community organization committed to
           empowering Pakistani women in Australia. We provide support,
           resources, and opportunities for growth, fostering a strong, inclusive
           network.
         </p>
-        <p className="pb-2 pt-2 p-regular text-md max-w-2xl text-gray-800">
+        <p className="p-regular text-sm sm:text-base max-w-2xl text-gray-800 pt-2">
           At APWA we are committed to empowering women to achieve their full
           potential through active engagement in business, employment, learning,
           and community activities.
         </p>
         <a href="tel:+61 415724571">
           <button className="bg-green-700 hover:bg-green-800 transition-all duration-300 py-2 px-4 rounded cursor-pointer text-white p-regular text-sm mt-4 flex items-center gap-2">
-            Contact Us{" "}
-            <span>
-              <IoMdCall />
-            </span>
+            Contact Us <IoMdCall />
           </button>
         </a>
       </div>
 
-      <div className="flex gap-10 py-10 px-16 bg-white">
-        <div className="relative flex-1 space-y-8 pl-4 sm:pl-6 md:pl-8">
-          {/* Timeline Vertical Line */}
-          <div className="absolute top-10 sm:top-10 md:top-10 lg:top-10 left-1 sm:left-3 md:left-[19px] lg:left-5 w-[2px] h-[580px] sm:h-[470px] md:h-[670px] lg:h-[420px] bg-green-800" />
-
+      {/* Timeline and Image Section */}
+      <div className="flex items-center flex-col-reverse lg:flex-row gap-10 py-10 px-4 sm:px-8 md:px-12 lg:px-16 bg-white">
+        {/* Timeline */}
+        <div className="relative flex-1 space-y-8 pl-4 sm:pl-6">
+          <div className="absolute top-10 left-0 sm:left-2 w-[2px] h-[400px] sm:[h-300px] md:h-[350px] lg:h-[420px] bg-green-800" />
           {data.items.map((item, index) => (
-            <div key={index} className="relative flex items-start space-x-4">
-              {/* Timeline Dot */}
-              <div className="absolute top-2 sm:top-2 left-[-20px] sm:left-[-22px] w-4 sm:w-5 h-4 sm:h-5 rounded-full border-2 border-green-800 bg-green-800" />
-
-              {/* Service Content */}
+            <div key={index} className="relative flex items-start gap-4">
+              <div className="absolute top-1 left-[-25px] w-5 h-5 rounded-full border-2 border-green-800 bg-green-800" />
               <div>
                 <h2 className="text-lg sm:text-xl text-green-800 tim uppercase">
                   {item.title}
@@ -86,98 +79,101 @@ const AboutAno = () => {
             </div>
           ))}
         </div>
-        <div className="w-1/2 flex items-center justify-center">
+
+        {/* Image */}
+        <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            className="rounded-xl"
+            className="rounded-xl max-w-full h-auto"
             src="https://www.apwa.org.au/images/about-banner.jpg"
             alt="About Us"
           />
         </div>
       </div>
 
-      <div className="py-20 px-16">
-        <h1 className="tel text-3xl text-gray-800 font-bold">
+      {/* Call-to-Action Cards */}
+      <div className="py-20 px-4 sm:px-8 md:px-12 lg:px-16">
+        <h1 className="tel text-2xl sm:text-3xl text-gray-800 font-bold">
           Be our part by ;
         </h1>
-        <div className="flex justify-between gap-10 pt-14">
-          <div className="flex flex-col items-center gap-4 w-1/3 bg-emerald-100 border border-emerald-300 rounded-xl px-4 py-4">
-            <p className="text-green-600">
-              <HandHeart size={50} strokeWidth={1} />
-            </p>
-              <h1 className="tim text-2xl text-gray-800">Make Donation</h1>
-              <p className="p-normal text-base text-gray-700 text-center">
-                Help Pakistani Women On The Move to support newly arrived
-                Pakistani women to thrive in Australia.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-14">
+          {[
+            {
+              icon: <HandHeart size={50} strokeWidth={1} />,
+              title: "Make Donation",
+              desc: "Help Pakistani Women On The Move to support newly arrived Pakistani women to thrive in Australia.",
+            },
+            {
+              icon: <Handshake size={50} strokeWidth={1} />,
+              title: "Become A Volunteer",
+              desc: "Join us as a volunteer and make a lasting impact on the lives of women in need.",
+            },
+            {
+              icon: <HandCoins size={50} strokeWidth={1} />,
+              title: "Sponsorship",
+              desc: "Become a sponsor and help empower women to build better, independent lives.",
+            },
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center text-center gap-4 bg-emerald-100 border border-emerald-300 rounded-xl px-6 py-6"
+            >
+              <div className="text-green-600">{card.icon}</div>
+              <h2 className="tim text-xl sm:text-2xl text-gray-800">
+                {card.title}
+              </h2>
+              <p className="p-normal text-sm sm:text-base text-gray-700">
+                {card.desc}
               </p>
-          </div>
-          <div className="flex flex-col items-center gap-4 w-1/3 bg-emerald-100 border border-emerald-300 rounded-xl px-4 py-4">
-            <p className="text-green-600">
-              <Handshake size={50} strokeWidth={1} />
-            </p>
-              <h1 className="tim text-2xl text-gray-800">Become A Volunteer</h1>
-              <p className="p-normal text-base text-gray-700 text-center">
-                Join us as a volunteer and make a lasting impact on the lives of women in need.
-              </p>
-          </div>
-          <div className="flex flex-col items-center gap-4 w-1/3 bg-emerald-100 border border-emerald-300 rounded-xl px-4 py-4">
-            <p className="text-green-600">
-              <HandCoins size={50} strokeWidth={1} />
-            </p>
-              <h1 className="tim text-2xl text-gray-800">Sponsorship</h1>
-              <p className="p-normal text-base text-gray-700 text-center">
-                Become a sponsor and help empower women to build better, independent lives.
-              </p>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      <div className="pt-10 pb-20 px-16 bg-white">
-        <h1 className="tim text-4xl font-bold text-gray-800">
+      {/* Donor Section */}
+      <div className="pt-10 pb-20 px-4 sm:px-8 md:px-12 lg:px-16 bg-white">
+        <h1 className="tim text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
           Our Latest Donations
         </h1>
-        <p className="p-regular text-base text-gray-700 pt-2">
-          Check out the most recent contributions that are making a difference!
+        <p className="p-regular text-sm sm:text-base text-gray-700 pt-2">
+          Check out the most recent contributions that arel making a difference!
         </p>
-        <div className="flex justify-between mx-auto max-w-5xl gap-10 pt-10">
-          <div className="flex items-center gap-4 bg-gray-100 px-4 py-8 rounded-md w-1/3 shadow-sm">
-            <img
-              className="w-28 h-28 object-cover rounded-full"
-              src="https://www.apwa.org.au/images/profile_subhash.jpg"
-              alt="First Donator"
-            />
-            <div className="flex flex-col gap-2">
-              <h1 className="tel text-xl text-gray-800">Subhash Nigam</h1>
-              <p className="p-regular text-sm text-gray-700">
-                Donated <span className="text-green-600">$250</span>
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 max-w-6xl mx-auto">
+          {[
+            {
+              name: "Subhash Nigam",
+              amount: "$250",
+              img: "https://www.apwa.org.au/images/profile_subhash.jpg",
+            },
+            {
+              name: "Fabia Parveen",
+              amount: "$300",
+              img: "https://www.apwa.org.au/images/avatar-icon-female.jpg",
+            },
+            {
+              name: "Neha Zaidi",
+              amount: "$150",
+              img: "https://www.apwa.org.au/images/avatar-icon-female.jpg",
+            },
+          ].map((donor, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-4 bg-gray-100 px-4 py-6 rounded-md shadow-sm"
+            >
+              <img
+                className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full"
+                src={donor.img}
+                alt={donor.name}
+              />
+              <div>
+                <h2 className="tel text-lg sm:text-xl text-gray-800">
+                  {donor.name}
+                </h2>
+                <p className="p-regular text-sm text-gray-700">
+                  Donated <span className="text-green-600">{donor.amount}</span>
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-4 bg-gray-100 px-4 py-8 rounded-md w-1/3 shadow-sm">
-            <img
-              className="w-28 h-28 object-cover rounded-full"
-              src="https://www.apwa.org.au/images/avatar-icon-female.jpg"
-              alt="Second Donator"
-            />
-            <div className="flex flex-col gap-2">
-              <h1 className="tel text-xl text-gray-800">Fabia Parveen</h1>
-              <p className="p-regular text-sm text-gray-700">
-                Donated <span className="text-green-600">$300</span>
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 bg-gray-100 px-4 py-8 rounded-md w-1/3 shadow-sm">
-            <img
-              className="w-28 h-28 object-cover rounded-full"
-              src="https://www.apwa.org.au/images/avatar-icon-female.jpg"
-              alt="Third Donator"
-            />
-            <div className="flex flex-col gap-2">
-              <h1 className="tel text-xl text-gray-800">Neha Zaidi</h1>
-              <p className="p-regular text-sm text-gray-700">
-                Donated <span className="text-green-600">$150</span>
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

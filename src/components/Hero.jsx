@@ -21,7 +21,7 @@ const Hero = () => {
           Empowering Women,
         </h1>
 
-        <h1 className="text-2xl sm:text-4xl md:text-5xl mb-6 leading-tight bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 text-transparent bg-clip-text tim">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl mb-6 leading-tight bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 text-transparent bg-clip-text tim">
           breaking the silence.
         </h1>
 
