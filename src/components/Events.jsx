@@ -35,25 +35,24 @@ const Events = () => {
   ];
 
   return (
-    <div className="px-16 pt-10 pb-10 min-h-screen bg-gradient-to-br from-cyan-50 to-green-50">
-      <p className="p-bold">Moments</p>
-      <h1 className="tim text-7xl font-extrabold tracking-wide py-4">
+    <div className="px-4 sm:px-6 lg:px-16 pt-10 pb-10 min-h-screen bg-gradient-to-br from-cyan-50 to-green-50">
+      <p className="p-bold text-sm sm:text-base">Moments</p>
+      <h1 className="tim text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-wide py-4">
         Our Latest Events
       </h1>
-      <p className="p-regular text-base pt-2">
+      <p className="p-regular text-gray-700 text-base pt-2 max-w-3xl">
         Explore a diverse range of past and upcoming events hosted by AusPak
         Women Association!
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
         {events.map((event, index) => (
           <div
             key={index}
             className="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 flex flex-col h-full"
           >
-            {/* Clickable Image */}
             <a href={event.link} target="_blank" rel="noopener noreferrer">
-              <div className="w-full h-96 overflow-hidden">
+              <div className="w-full aspect-video overflow-hidden">
                 <img
                   src={event.img}
                   alt={event.title}
@@ -62,26 +61,20 @@ const Events = () => {
               </div>
             </a>
 
-            {/* Content */}
             <div className="p-6 flex flex-col justify-between grow group/card relative">
               <div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2 tim">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2 tim">
                   {event.title}
                 </h3>
-
-                {/* Description section */}
-                <p className="font-semibold text-black text-sm">
+                <p className="text-black text-sm p-medium">
                   {event.mainDesc}
                 </p>
-
-                {/* Hovered full description appears only inside card content */}
-                <p className="text-gray-700 text-sm mt-2 max-h-0 opacity-0 group-hover/card:max-h-40 group-hover/card:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+                <p className="text-gray-700 text-sm mt-2 max-h-0 opacity-0 group-hover/card:max-h-40 group-hover/card:opacity-100 transition-all duration-500 ease-in-out overflow-hidden p-normal">
                   {event.fullDesc}
                 </p>
               </div>
 
-              {/* Always at bottom */}
-              <div className="border-t pt-4 mt-4 text-sm text-gray-500 flex justify-between">
+              <div className="border-t pt-4 mt-4 text-sm text-gray-500 flex justify-between p-normal">
                 <span>{event.date}</span>
                 <span>{event.day}</span>
               </div>

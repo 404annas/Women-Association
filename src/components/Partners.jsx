@@ -13,8 +13,8 @@ const logos = [
 
 const Partners = () => {
   return (
-    <div className="bg-white pt-10 pb-10 overflow-hidden">
-      <h1 className="pb-14 tim font-bold text-4xl text-center">
+    <div className="bg-white pt-10 pb-10 overflow-hidden px-4 sm:px-6 lg:px-12">
+      <h1 className="pb-10 sm:pb-14 tim font-bold text-2xl sm:text-3xl md:text-4xl text-center">
         Our Partners & Supporters
       </h1>
       <Marquee speed={150} gradient={false} pauseOnHover={false}>
@@ -23,7 +23,7 @@ const Partners = () => {
             key={index}
             src={logo}
             alt={`Logo ${index + 1}`}
-            className="mx-20 w-32 inline-block"
+            className="mx-10 sm:mx-16 w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain"
           />
         ))}
       </Marquee>
