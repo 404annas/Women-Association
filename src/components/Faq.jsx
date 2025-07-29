@@ -51,7 +51,7 @@ const Faq = () => {
             alt="Magic Icon"
           />
         </div>
-        <h1 className="text-3xl sm:text-4xl tim text-gray-800 flex gap-2">
+        <h1 className="text-2xl sm:text-4xl tim text-gray-800 flex gap-2 px-4">
           Common Questions Answered
         </h1>
       </div>
