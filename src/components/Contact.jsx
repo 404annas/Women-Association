@@ -49,7 +49,7 @@ const Contact = () => {
             </span>
             <input
               type="text"
-              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-50"
+              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-white"
               placeholder="John Doe"
             />
           </div>
@@ -67,7 +67,7 @@ const Contact = () => {
             </span>
             <input
               type="email"
-              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-50"
+              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-white"
               placeholder="johndoe@gmail.com"
             />
           </div>
@@ -85,7 +85,7 @@ const Contact = () => {
             </span>
             <input
               type="tel"
-              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-50"
+              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-white"
               placeholder="+1 (555) 971 569"
             />
           </div>
@@ -94,7 +94,7 @@ const Contact = () => {
           <textarea
             rows="5"
             placeholder="Hi, I want to Donate some Amount"
-            className="text-black border border-emerald-300 outline-none px-4 py-2 rounded bg-emerald-50 resize-none"
+            className="text-black border border-emerald-300 outline-none px-4 py-2 rounded bg-white resize-none"
           ></textarea>
 
           <button
