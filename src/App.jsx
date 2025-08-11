@@ -10,6 +10,7 @@ import AboutAno from "./components/AboutAno";
 import EventAno from "./components/EventAno";
 import Donate from "./components/Donate";
 import Save from "./components/Save";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = () => (
   <>
@@ -23,16 +24,19 @@ const Home = () => (
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="about" element={<AboutAno />} />
-        <Route path="events" element={<EventAno />} />
-        <Route path="donate" element={<Donate />} />
-        <Route path="save-heaven" element={<Save />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<AboutAno />} />
+          <Route path="events" element={<EventAno />} />
+          <Route path="donate" element={<Donate />} />
+          <Route path="save-heaven" element={<Save />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

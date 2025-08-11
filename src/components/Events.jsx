@@ -53,7 +53,7 @@ const Events = () => {
           >
             <a href={event.link} target="_blank" rel="noopener noreferrer">
               <div className="w-full aspect-video overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={event.img}
                   alt={event.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"

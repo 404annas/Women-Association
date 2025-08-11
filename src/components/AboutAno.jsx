@@ -83,6 +83,7 @@ const AboutAno = () => {
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
+            loading="lazy"
             className="rounded-xl max-w-full h-auto"
             src="https://www.apwa.org.au/images/about-banner.jpg"
             alt="About Us"
@@ -115,7 +116,7 @@ const AboutAno = () => {
           ].map((card, i) => (
             <div
               key={i}
-              className="flex flex-col items-center text-center gap-4 bg-emerald-100 border border-emerald-300 rounded-xl px-6 py-6"
+              className="flex flex-col items-center text-center gap-4 bg-white border border-emerald-300 rounded-xl px-6 py-6"
             >
               <div className="text-green-600">{card.icon}</div>
               <h2 className="tim text-xl sm:text-2xl text-gray-800">
@@ -160,6 +161,7 @@ const AboutAno = () => {
               className="flex items-center gap-4 bg-gray-100 px-4 py-6 rounded-md shadow-sm"
             >
               <img
+                loading="lazy"
                 className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full"
                 src={donor.img}
                 alt={donor.name}

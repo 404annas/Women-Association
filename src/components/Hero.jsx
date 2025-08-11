@@ -1,12 +1,13 @@
 import { IoMdHeart } from "react-icons/io";
 import { Link } from "react-router-dom";
+import heroImg from "../assets/heroImg.svg";
 
 const Hero = () => {
   return (
     <div
-      className="bg-cover min-h-screen flex items-center mt-10"
+      className="bg-cover bg-no-repeat min-h-screen flex items-center mt-10 bg-black px-0"
       style={{
-        backgroundImage: "url('https://apwa.org.au/images/home-banner.jpg')",
+        backgroundImage: `url(${heroImg})`,
       }}
     >
       <div className="text-white px-6 sm:px-10 md:px-16 py-20 max-w-6xl w-full">

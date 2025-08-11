@@ -46,7 +46,7 @@ const About = () => {
           <div className="relative w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96">
             <div className="w-full h-full rounded-full bg-green-500 p-1 relative z-0">
               <div className="relative w-full h-full rounded-full bg-white p-1 sm:p-2">
-                <img
+                <img loading="lazy"
                   className="w-full h-full object-cover rounded-full border-4 border-white scale-x-100 md:scale-x-[-1] transition-transform duration-300"
                   src="https://www.apwa.org.au/images/shafaq-jaffery.jpg"
                   alt="Shafaq Jaffery"

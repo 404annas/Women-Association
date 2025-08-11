@@ -33,13 +33,14 @@ const Save = () => {
           Founder's Message
         </h1>
 
-        <div className="flex flex-col lg:flex-row justify-between gap-y-10 lg:gap-20 pt-10">
+        <div className="flex flex-col items-center lg:flex-row justify-between gap-y-10 lg:gap-20 pt-10">
           {/* Image + Name */}
           <div className="w-full lg:w-1/2 flex flex-col items-center gap-4">
             <div className="relative w-60 h-60 sm:w-72 sm:h-72">
               <div className="w-full h-full rounded-full bg-green-500 p-1 relative z-0">
                 <div className="relative w-full h-full rounded-full bg-white p-1">
                   <img
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-full border-4 border-white"
                     src="https://www.apwa.org.au/images/shafaq-jaffery.jpg"
                     alt="Shafaq Jaffery"

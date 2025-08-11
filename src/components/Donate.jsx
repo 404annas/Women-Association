@@ -45,7 +45,7 @@ const Donate = () => {
                   Australian Humanity Support Limited
                 </p>
               </div>
-              <img className="w-12" src={chipImg} alt="Chip Image" />
+              <img loading="lazy" className="w-12" src={chipImg} alt="Chip Image" />
               <p className="tel text-2xl">400 012 043</p>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0">
                 <div className="flex flex-col">
@@ -67,7 +67,7 @@ const Donate = () => {
                   AusPak Women Association Incorporated APWA
                 </p>
               </div>
-              <img className="w-12" src={chipImg} alt="Chip Image" />
+              <img loading="lazy" className="w-12" src={chipImg} alt="Chip Image" />
               <p className="tel text-2xl">416 943 758</p>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-0">
                 <div className="flex flex-col">

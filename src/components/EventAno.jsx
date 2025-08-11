@@ -34,7 +34,7 @@ const EventAno = () => {
         </div>
 
         <div className="w-full lg:w-1/2">
-          <img
+          <img loading="lazy"
             className="rounded-md w-full h-auto"
             src="https://www.apwa.org.au/images/event-banner.jpg"
             alt="Event Banner"

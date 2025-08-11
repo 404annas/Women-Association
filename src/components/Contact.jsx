@@ -38,7 +38,7 @@ const Contact = () => {
         <form className="flex flex-col gap-3 w-full p-normal">
           <label className="font-medium text-gray-800">Name</label>
           <div className="flex">
-            <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-200 border border-e-0 border-emerald-300 rounded-s-md">
+            <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-100 border border-e-0 border-emerald-300 rounded-s-md">
               <svg
                 className="w-5 h-5 text-emerald-500"
                 fill="currentColor"
@@ -49,14 +49,14 @@ const Contact = () => {
             </span>
             <input
               type="text"
-              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-100"
+              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-50"
               placeholder="John Doe"
             />
           </div>
 
           <label className="font-medium text-gray-800">Email</label>
           <div className="flex">
-            <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-200 border border-e-0 border-emerald-300 rounded-s-md">
+            <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-100 border border-e-0 border-emerald-300 rounded-s-md">
               <svg
                 className="w-5 h-5 text-emerald-500"
                 fill="currentColor"
@@ -67,14 +67,14 @@ const Contact = () => {
             </span>
             <input
               type="email"
-              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-100"
+              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-50"
               placeholder="johndoe@gmail.com"
             />
           </div>
 
           <label className="font-medium text-gray-800">Phone Number</label>
           <div className="flex">
-            <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-200 border border-e-0 border-emerald-300 rounded-s-md">
+            <span className="flex items-center px-3 text-sm text-gray-900 bg-emerald-100 border border-e-0 border-emerald-300 rounded-s-md">
               <svg
                 className="w-5 h-5 text-emerald-500"
                 fill="currentColor"
@@ -85,7 +85,7 @@ const Contact = () => {
             </span>
             <input
               type="tel"
-              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-100"
+              className="w-full text-black border border-emerald-300 outline-none px-4 py-2 rounded-r-md bg-emerald-50"
               placeholder="+1 (555) 971 569"
             />
           </div>
@@ -94,7 +94,7 @@ const Contact = () => {
           <textarea
             rows="5"
             placeholder="Hi, I want to Donate some Amount"
-            className="text-black border border-emerald-300 outline-none px-4 py-2 rounded bg-emerald-100 resize-none"
+            className="text-black border border-emerald-300 outline-none px-4 py-2 rounded bg-emerald-50 resize-none"
           ></textarea>
 
           <button
@@ -121,18 +121,18 @@ const Contact = () => {
       <hr />
 
       {/* Contact Cards */}
-      <div className="py-10">
-        <h1 className="p-regular text-base md:text-lg text-gray-700 max-w-2xl">
-          We empower Pakistani and multicultural women in Australia to achieve
-          independence and well-being across all aspects of life.
-        </h1>
+      <h1 className="p-regular text-base md:text-lg text-gray-700 max-w-2xl py-10">
+        We empower Pakistani and multicultural women in Australia to achieve
+        independence and well-being across all aspects of life.
+      </h1>
 
+      {/* <div className="py-10">
         <div className="flex flex-col md:flex-row items-center justify-between pt-10 gap-6">
           {[
             {
               icon: <MdEmail />,
               title: "Email",
-              text: "Write us and we'll get back to you as soon as possible.",
+              text: "Write us and we'll get back to you.",
               value: "info@auspakwomenassociation.com",
               href: "mailto:info@auspakwomenassociation.com",
             },
@@ -169,6 +169,54 @@ const Contact = () => {
               )}
             </div>
           ))}
+        </div>
+      </div> */}
+
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10 pb-10">
+        {/* Left Side - Contact Info */}
+        <div className="flex flex-col sm:flex-row gap-8 lg:gap-8 ">
+          {/* Call Us */}
+          <a
+            href="tel:+61 415724571"
+            className="flex flex-row items-center gap-2 sand"
+          >
+            <IoMdCall size={30} className="text-first text-green-800" />
+            <div className="">
+              <p className="text-xl font-bold text-gray-800 tim">Call Us</p>
+              <p className="p-regular text-gray-800 cursor-pointer text-xs sm:text-sm">
+                +61 415724571
+              </p>
+            </div>
+          </a>
+
+          {/* Divider - hidden on mobile */}
+          <div className="hidden lg:block w-px bg-gray-300 h-16"></div>
+
+          {/* Email Us */}
+          <a
+            href="mailto:info@auspakwomenassociation.com"
+            className="flex items-center gap-4 sand"
+          >
+            <MdEmail size={30} className="text-green-800" />
+            <div>
+              <p className="text-xl font-bold text-gray-800 tim">Email Us At</p>
+              <p className="p-regular text-gray-800 cursor-pointer text-xs sm:text-sm">
+                info@auspakwomenassociation.com
+              </p>
+            </div>
+          </a>
+          <div className="hidden lg:block w-px bg-gray-300 h-16"></div>
+
+          {/* Email Us */}
+          <div className="flex items-center gap-4 sand">
+            <IoLocation size={30} className="text-green-800" />
+            <div>
+              <p className="text-xl font-bold text-gray-800 tim">Address</p>
+              <p className="p-regular text-gray-800 cursor-pointer text-xs sm:text-sm">
+                7 Campfire Ct, Werrington Downs NSW 2747, Australia
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

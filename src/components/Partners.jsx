@@ -19,7 +19,7 @@ const Partners = () => {
       </h1>
       <Marquee speed={150} gradient={false} pauseOnHover={false}>
         {logos.map((logo, index) => (
-          <img
+          <img loading="lazy"
             key={index}
             src={logo}
             alt={`Logo ${index + 1}`}

@@ -9,7 +9,12 @@ const EventCard = ({
 }) => (
   <div className="flex flex-col bg-emerald-50">
     <a href={link}>
-      <img className="w-full h-60 object-cover" src={image} alt={title} />
+      <img
+        loading="lazy"
+        className="w-full h-60 object-cover"
+        src={image}
+        alt={title}
+      />
     </a>
     <div className="px-4 py-6 flex flex-col gap-4">
       <div className="bg-emerald-100 w-fit px-4 py-2 tel rounded-md text-sm">
